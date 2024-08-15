@@ -1,0 +1,162 @@
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Header container (align title and button separately) */
+header {
+  background-color: #FF9800;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #333; /* Default color for light mode */
+}
+
+/* Toggle button for light/dark mode */
+button.toggle-mode {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: hsl(123, 100%, 50%); /* Blue background */
+  color: white;
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+button.toggle-mode:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Input styles */
+input[type="text"] {
+  width: calc(100% - 100px);
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Global button styles */
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Specific button styles */
+button.delete {
+  background-color: #F44336; /* Red */
+  color: white;
+}
+
+button.save {
+  background-color: #FF9800; /* Orange */
+  color: white;
+}
+
+button.edit {
+  background-color: #2196F3; /* Blue */
+  color: white;
+}
+
+/* Hover effect for all buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Ensure button-specific hover effects are still applied */
+button.delete:hover {
+  background-color: darkred;
+}
+
+button.save:hover {
+  background-color: darkorange;
+}
+
+button.edit:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+/* Light Theme */
+body.light {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+body.light h1 {
+  color: #333; /* Ensure h1 color is dark in light mode */
+}
+
+body.light .note {
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+body.light button.close,
+body.light button.delete {
+  background-color: #F44336; /* Red in light mode */
+}
+
+body.light button.save {
+  background-color: #FF9800; /* Orange in light mode */
+}
+
+body.light button.edit {
+  background-color: #2196F3; /* Blue in light mode */
+}
+
+/* Dark Theme */
+body.dark {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+body.dark h1 {
+  color: #f0f0f0; /* Make h1 visible in dark mode (light color) */
+}
+
+body.dark .note {
+  background-color: #444;
+  border: 1px solid #555;
+}
+
+body.dark input[type="text"] {
+  background-color: #555;
+  color: #f0f0f0;
+}
+
+body.dark button.close,
+body.dark button.delete {
+  background-color: #F44336; /* Red in dark mode */
+}
+
+body.dark button.save {
+  background-color: #FF9800; /* Orange in dark mode */
+}
+
+body.dark button.edit {
+  background-color: #2196F3; /* Blue in dark mode */
+}
+
+/* Common header styling */
+.App header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s; /* Smooth transition */
+}
