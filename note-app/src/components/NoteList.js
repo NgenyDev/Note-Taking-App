@@ -11,8 +11,8 @@ function NoteList({ notes, deleteNote, editNote, toggleEditing, onNoteClick }) {
         >
           <h3>{note.title}</h3>
           <p>{note.text.substring(0, 100)}...</p>
-          <button onClick={() => deleteNote(note.id)}>Delete</button>
-          <button onClick={() => toggleEditing(note.id)}>
+          <button onClick={() => deleteNote(note.id)} className="delete">Delete</button>
+          <button onClick={() => toggleEditing(note.id)} className="save">
             {note.isEditing ? "Save" : "Edit"}
           </button>
           {note.isEditing && (

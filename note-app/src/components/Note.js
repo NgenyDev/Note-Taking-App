@@ -29,19 +29,7 @@ function Note({ note, deleteNote, editNote, toggleEditing }) {
           <h3>{note.title}</h3>
           <p>{note.text}</p>
           <button className="edit" onClick={() => toggleEditing(note.id)}>Edit</button>
-          <button 
-  className="delete" 
-  onClick={() => deleteNote(note.id)}
-  style={{
-    color: 'white',
-    border: 'none',
-    backgroundColor: '#F44336', /* Red color */
-    padding: '10px 20px',
-    borderRadius: '5px',
-    cursor: 'pointer'
-  }}>
-  Delete
-</button>
+          <button className="delete" onClick={() => deleteNote(note.id)}> Delete</button>
         </div>
       )}
     </div>
