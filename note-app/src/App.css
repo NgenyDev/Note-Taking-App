@@ -155,13 +155,70 @@ body.dark button.edit {
   padding: 1rem;
 }
 body {
-  background-image: url('./assets/note.png'); /* Path to the transparent image */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
-  background-position: center;  /* Center the image */
-  background-size: cover;       /* Make the image cover the entire body */
-  background-color: #f0f0f0;    /* Fallback color */
-  height: 200vh;                /* Ensure the body takes up the full viewport height */
-  margin: 0;                    /* Remove default margin */
-  padding: 0;
+  position: relative;
+  overflow: hidden; /* Ensure no overflow if using absolute positioning */
 }
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/note.png'); /* Light mode image */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* Adjust transparency of the background image */
+  z-index: -1; /* Place the image behind the content */
+}
+
+body.dark::before {
+  background-image: url('./assets/dark mode.jpeg'); /* Dark mode image */
+}
+.note-form {
+  margin-bottom: 20px;
+}
+
+.note-form input[type="text"] {
+  margin: 5px;
+  padding: 8px;
+  width: 200px;
+}
+
+.note-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  background-color: #007bff;
+  color: white;
+}
+
+.note-form button:hover {
+  background-color: #0056b3;
+}
+
+.note-list {
+  flex: 1; /* Take remaining space */
+  overflow-y: auto; /* Enable vertical scrolling */
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #f9f9f9;
+}
+
+.note {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+}
+
 
