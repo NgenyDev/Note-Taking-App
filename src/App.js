@@ -2,6 +2,7 @@ import React, { useState } from 'react'; // Import useState
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Signup from './components/Signup';
+import Footer from './components/Footer';
 import Home from './components/Home';
 import Contact from './components/Contact';
 import Blog from './components/Blog';
@@ -23,7 +24,7 @@ const App = () => {
             <nav className="navbar">
                 <ul>
                     <li>
-                        <button onClick={handleBlogButtonClick}>Blog</button>
+                        <button onClick={handleBlogButtonClick}>Note</button>
                     </li>
                     {/* Add other navigation items here */}
                 </ul>
@@ -36,8 +37,10 @@ const App = () => {
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/login" element={<Login />} /> {/* Add the Login route */}
                 <Route path="/Blog" element={<Blog />} />
+                <Route path="*" element={<h2>Footer</h2>} /> 
                 {/* Add other routes here */}
             </Routes>
+            <Footer /> 
         </Router>
     );
 };

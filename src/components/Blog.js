@@ -86,7 +86,7 @@ const Blog = () => {
 
     return (
         <div className="blog">
-            <h1>Blog</h1>
+            <h1>Note</h1>
             <div className="button-group">
                 <button onClick={() => setShowSearch(!showSearch)}>
                     {showSearch ? 'Hide Search' : 'Show Search'}

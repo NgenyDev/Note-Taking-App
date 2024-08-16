@@ -10,7 +10,7 @@ body, h1, h2, h3, p, div, input, form, a, nav, ul, li {
 
 /* Body background and general layout */
 body {
-  background-color: #fefdfd;
+  background-color: hsl(27, 42%, 54%);
   color: #fdfcfc;
   display: flex;
   flex-direction: column;
@@ -148,3 +148,4 @@ input[type="submit"]:hover {
 .login-signup a:hover {
   text-decoration: underline;
 } 
+
