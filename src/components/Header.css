@@ -1,0 +1,58 @@
+/* Header styling */
+.header {
+    width: 100%;
+    background-color: #ffffff; /* White background */
+    padding: 10px 20px; /* Padding around the header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    display: flex;
+    justify-content: space-between; /* Space between title and nav */
+    align-items: center;
+    position: fixed; /* Fix header to the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure header is on top */
+  }
+  
+  .header-title {
+    margin: 0;
+    font-size: 24px;
+    padding-left: 30px;
+    color: #fdfcfc; /* Dark text color for contrast */
+  }
+  
+  nav {
+    margin: 0;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 15px; /* Space between nav items */
+    padding: 0;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #007bff; /* Link color */
+    font-size: 16px;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  /* Dark Mode Styling */
+  .dark-mode .header {
+    background-color: #333; /* Dark background */
+  }
+  
+  .dark-mode .nav-link {
+    color: #f4f4f4; /* Light text color in dark mode */
+  }
+  
+  /* Ensure the header fits within the viewport */
+  body {
+    padding-top: 50px; /* Adjust to header height to prevent content overlap */
+  }
+  
