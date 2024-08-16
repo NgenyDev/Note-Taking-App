@@ -34,7 +34,7 @@ function Signup() {
                     </form>
                     <div className="terms">
                         By creating an account you agree to our
-                        <a>Terms of Service</a>.
+                        <a href="/terms">Terms of Service</a>
                     </div>
                     <p className="login-signup">Already have an account? <a href="/login">Log in</a></p>
                 </>
