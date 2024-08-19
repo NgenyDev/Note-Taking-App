@@ -28,7 +28,11 @@ const Header = () => {
                     <li><Link to="/home" className="nav-link">Home</Link></li>
                     <li><Link to="/contact" className="nav-link">Contact Us</Link></li>
                     <li><Link to="/help" className="nav-link">Help</Link></li>
+<<<<<<< HEAD
                     <li><Link to="/Blog" className="nav-link">Notes</Link></li> {/* Ensure this matches the route in App.js */}
+=======
+                    <li><Link to="/blog" className="nav-link">Notes</Link></li>
+>>>>>>> 4589306ff834f2d61d6ed78cd20bb42bebf04387
                     <li><Link to="/login" className="nav-link">Log In</Link></li>
                     <li><Link to="/signup" className="nav-link">Sign Up</Link></li>
                     <li>

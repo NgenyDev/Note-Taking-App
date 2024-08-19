@@ -9,6 +9,7 @@
       "id": "8e7c",
       "email": "eronoh036@gmail.com",
       "password": "emmanuel"
+<<<<<<< HEAD
     },
     {
       "id": "e125",
@@ -29,6 +30,8 @@
       "id": "5939",
       "email": "eronoh036@gmail.com",
       "password": "eiuhfreujfner"
+=======
+>>>>>>> 4589306ff834f2d61d6ed78cd20bb42bebf04387
     }
   ],
   "notes": [
@@ -42,6 +45,7 @@
         "Basics",
         "Web Development"
       ]
+<<<<<<< HEAD
     },
     {
       "title": "My coding actiivity",
@@ -62,6 +66,8 @@
         "solving things mathematically"
       ],
       "date": "2024-08-19"
+=======
+>>>>>>> 4589306ff834f2d61d6ed78cd20bb42bebf04387
     }
   ]
 }

@@ -10,8 +10,13 @@ const Home = () => {
           The simplest way <br /> to keep notes
         </h1>
         <h2>Note Taking App</h2>
+<<<<<<< HEAD
         <p className="para">
           All your notes, synced on all your devices. Get Note-Taking app now for iOS,
+=======
+        <p>
+          All your notes, synced on all your devices. Get Simplenote now for iOS,
+>>>>>>> 4589306ff834f2d61d6ed78cd20bb42bebf04387
           <br /> Android, Mac, Windows, Linux, or in your browser.
         </p>
         <Link to="/signup">

@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+=======
+import React from 'react'; // Remove useState import
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Remove Link import
+>>>>>>> 4589306ff834f2d61d6ed78cd20bb42bebf04387
 import Header from './components/Header';
 import Signup from './components/Signup';
 import Home from './components/Home';
 import Contact from './components/Contact';
+<<<<<<< HEAD
 import Login from './components/Login';
 import Help from './components/Help';
 import Footer from './components/Footer';
@@ -47,9 +53,33 @@ const App = () => {
                 {showCarousel && <Carousel />}
             </div>
             <Footer />
+=======
+import Blog from './components/Blog';
+import Login from './components/Login'; // Import the Login component
+import './App.css';
+import Help from './components/Help';
+
+
+const App = () => {
+    return (
+        <Router>
+            <Header />
+            {/* Removed the navigation bar and Editor conditional rendering */}
+            <Routes>
+                <Route path='/Help' element={<Help />} />
+                <Route path='/contact' element={<Contact />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/signup" element={<Signup />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/blog" element={<Blog />} />
+            </Routes>
+>>>>>>> 4589306ff834f2d61d6ed78cd20bb42bebf04387
         </Router>
     );
 };
 
 export default App;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4589306ff834f2d61d6ed78cd20bb42bebf04387

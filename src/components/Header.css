@@ -1,6 +1,7 @@
 /* Header styling */
 .header {
     width: 100%;
+<<<<<<< HEAD
     background-color: #202020; /* Dark background for header */
     padding: 10px 20px;
     color: #fdfcfc; /* Light text color for contrast */
@@ -13,12 +14,30 @@
     right: 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+=======
+    background-color: #ffffff; /* White background */
+    padding: 10px 20px; /* Padding around the header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    display: flex;
+    justify-content: space-between; /* Space between title and nav */
+    align-items: center;
+    position: fixed; /* Fix header to the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure header is on top */
+>>>>>>> 4589306ff834f2d61d6ed78cd20bb42bebf04387
   }
   
   .header-title {
     margin: 0;
     font-size: 24px;
+<<<<<<< HEAD
     color: yellow;
+=======
+    padding-left: 30px;
+    color: #fdfcfc; /* Dark text color for contrast */
+>>>>>>> 4589306ff834f2d61d6ed78cd20bb42bebf04387
   }
   
   nav {
@@ -28,17 +47,26 @@
   .nav-list {
     list-style: none;
     display: flex;
+<<<<<<< HEAD
     gap: 15px;
+=======
+    gap: 15px; /* Space between nav items */
+>>>>>>> 4589306ff834f2d61d6ed78cd20bb42bebf04387
     padding: 0;
   }
   
   .nav-link {
     text-decoration: none;
+<<<<<<< HEAD
     color: cyan; /* Light blue color for links */
+=======
+    color: #007bff; /* Link color */
+>>>>>>> 4589306ff834f2d61d6ed78cd20bb42bebf04387
     font-size: 16px;
   }
   
   .nav-link:hover {
+<<<<<<< HEAD
     text-decoration: underline;
   }
   
@@ -53,18 +81,31 @@
   
   .mode-toggle:hover {
     text-decoration: underline;
+=======
+    text-decoration: underline; /* Underline on hover */
+>>>>>>> 4589306ff834f2d61d6ed78cd20bb42bebf04387
   }
   
   /* Dark Mode Styling */
   .dark-mode .header {
+<<<<<<< HEAD
     background-color: #333;
+=======
+    background-color: #333; /* Dark background */
+>>>>>>> 4589306ff834f2d61d6ed78cd20bb42bebf04387
   }
   
   .dark-mode .nav-link {
     color: #f4f4f4; /* Light text color in dark mode */
   }
   
+<<<<<<< HEAD
   .dark-mode .mode-toggle {
     color: #f4f4f4;
+=======
+  /* Ensure the header fits within the viewport */
+  body {
+    padding-top: 50px; /* Adjust to header height to prevent content overlap */
+>>>>>>> 4589306ff834f2d61d6ed78cd20bb42bebf04387
   }
   

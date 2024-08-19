@@ -17,6 +17,13 @@ function Help() {
         localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
     }, [isDarkMode]);
 
+<<<<<<< HEAD
+=======
+    const toggleTheme = () => {
+        setIsDarkMode(!isDarkMode);
+    };
+
+>>>>>>> 4589306ff834f2d61d6ed78cd20bb42bebf04387
     return (
         <div className={`help-container ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
 

@@ -83,7 +83,11 @@ function Login() {
                         <button type="submit">Login</button>
                     </form>
                     <p className="forgot-password-link" onClick={() => setShowForgotPassword(true)}>
+<<<<<<< HEAD
                         Forgot Password? 
+=======
+                        Forgot Password?
+>>>>>>> 4589306ff834f2d61d6ed78cd20bb42bebf04387
                     </p>
                     <p className="signup-link">
                         Don't have an account? <a href="/signup">Sign up</a>

@@ -26,33 +26,6 @@ function Signup() {
     };
 
     return (
-<<<<<<< HEAD
-        <div className="signup-container">
-            <form className="signup-form" onSubmit={handleSignup}>
-                {!isSubmitted ? (
-                    <>
-                        <h1>Sign Up</h1>
-                        <label>Email</label>
-                        <input
-                            type="email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            required
-                        />
-                        <label>Password</label>
-                        <input
-                            type="password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            required
-                        />
-                        <button type="submit">Sign up</button>
-                    </>
-                ) : (
-                    <p>Signup successful! Please check your email.</p>
-                )}
-            </form>
-=======
         <div>
             {!isSubmitted ? (
                 <form onSubmit={handleSignup}>
@@ -78,7 +51,6 @@ function Signup() {
                     <p>Signup successful! Please check your email.</p>
                 </div>
             )}
->>>>>>> 4589306ff834f2d61d6ed78cd20bb42bebf04387
         </div>
     );
 }

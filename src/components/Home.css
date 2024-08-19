@@ -8,12 +8,16 @@
     height: 100vh; /* Full viewport height */
     padding: 0 20px; /* Padding on the sides */
     background-color: #f0f0f0; /* Light background color for better readability */
+<<<<<<< HEAD
     padding-top: 0px;
+=======
+>>>>>>> 4589306ff834f2d61d6ed78cd20bb42bebf04387
   }
   
   .home-content {
     max-width: 800px; /* Maximum width for larger screens */
     width: 100%; /* Full width on smaller screens */
+<<<<<<< HEAD
     padding-top: 10%; /* Padding around the content */
     text-align: center;
   }
@@ -23,6 +27,11 @@
     padding-left: 100px;
   }
 
+=======
+    padding: 20px; /* Padding around the content */
+  }
+  
+>>>>>>> 4589306ff834f2d61d6ed78cd20bb42bebf04387
   .home-header h1 {
     font-size: 2.5rem; /* Responsive font size */
     margin: 0 0 20px 0; /* Margin around the heading */
@@ -49,8 +58,11 @@
     transition: background-color 0.3s ease; /* Smooth background color transition */
   }
   
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4589306ff834f2d61d6ed78cd20bb42bebf04387
   .signup-button:hover {
     background-color: #45a049; /* Darker green on hover */
   }
@@ -73,4 +85,8 @@
       font-size: 0.875rem; /* Smaller font size for smaller screens */
     }
   }
+<<<<<<< HEAD
   
+=======
+  
+>>>>>>> 4589306ff834f2d61d6ed78cd20bb42bebf04387
