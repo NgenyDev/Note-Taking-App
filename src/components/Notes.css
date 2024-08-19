@@ -70,7 +70,7 @@
 }
 
 .blog-post button:hover {
-    background-color: #b30000;
+    background-color: #51f217;
 }
 
 .blog-form {
@@ -94,12 +94,19 @@
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
+    background-color: #0ea126;
     color: white;
     cursor: pointer;
 }
 
 .blog-form button:hover {
-    background-color: #0056b3;
+    background-color: #0cc32e;
 }
 
+edit {
+    background-color: green;
+}
+
+delete {
+    background-color: red;
+}

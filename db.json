@@ -9,6 +9,26 @@
       "id": "8e7c",
       "email": "eronoh036@gmail.com",
       "password": "emmanuel"
+    },
+    {
+      "id": "e125",
+      "email": "elviskirui140@manuh",
+      "password": "25508731"
+    },
+    {
+      "id": "d970",
+      "email": "eronoh036@gmail.com",
+      "password": "ronoh"
+    },
+    {
+      "id": "7947",
+      "email": "eronoh036@gmail.com",
+      "password": "gfdsggfhs"
+    },
+    {
+      "id": "5939",
+      "email": "eronoh036@gmail.com",
+      "password": "eiuhfreujfner"
     }
   ],
   "notes": [
@@ -22,6 +42,26 @@
         "Basics",
         "Web Development"
       ]
+    },
+    {
+      "title": "My coding actiivity",
+      "content": "My coding skills include problem statement.",
+      "tags": [
+        "coding",
+        "solving things mathematically"
+      ],
+      "date": "2024-08-18",
+      "id": "4511"
+    },
+    {
+      "id": "d403",
+      "title": "My journey to Mombasa",
+      "content": "klsdghd;m jvirsomfcxxxxxxxxxkj ngkldksf ml jtdgeroifcjd",
+      "tags": [
+        "coding",
+        "solving things mathematically"
+      ],
+      "date": "2024-08-19"
     }
   ]
 }

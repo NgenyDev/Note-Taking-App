@@ -28,7 +28,7 @@ const Header = () => {
                     <li><Link to="/home" className="nav-link">Home</Link></li>
                     <li><Link to="/contact" className="nav-link">Contact Us</Link></li>
                     <li><Link to="/help" className="nav-link">Help</Link></li>
-                    <li><Link to="/blog" className="nav-link">Notes</Link></li>
+                    <li><Link to="/Blog" className="nav-link">Notes</Link></li> {/* Ensure this matches the route in App.js */}
                     <li><Link to="/login" className="nav-link">Log In</Link></li>
                     <li><Link to="/signup" className="nav-link">Sign Up</Link></li>
                     <li>

@@ -83,7 +83,7 @@ function Login() {
                         <button type="submit">Login</button>
                     </form>
                     <p className="forgot-password-link" onClick={() => setShowForgotPassword(true)}>
-                        Forgot Password?
+                        Forgot Password? 
                     </p>
                     <p className="signup-link">
                         Don't have an account? <a href="/signup">Sign up</a>

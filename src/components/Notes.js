@@ -1,39 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Notes.css'; // Import the CSS file for styling
 import Editor from './Editor'; // Import the Editor component
 
 const Notes = () => {
-    const [notes, setNotes] = useState([
-        {
-            id: 1,
-            title: 'First Note',
-            content: 'This is the content of the first note.',
-            tags: ['general', 'introduction'],
-            date: new Date().toISOString().split('T')[0], // Default date format
-        },
-        {
-            id: 2,
-            title: 'Second Note',
-            content: 'This is the content of the second note.',
-            tags: ['update', 'news'],
-            date: new Date().toISOString().split('T')[0], // Default date format
-        },
-    ]);
-
+    const [notes, setNotes] = useState([]);
     const [newNote, setNewNote] = useState({
         title: '',
         content: '',
         tags: '',
         date: new Date().toISOString().split('T')[0], // Default date format
     });
-
     const [searchQuery, setSearchQuery] = useState('');
     const [editMode, setEditMode] = useState(false);
     const [noteIdToEdit, setNoteIdToEdit] = useState(null);
     const [showSearch, setShowSearch] = useState(false);
     const [showForm, setShowForm] = useState(false);
-    const [showNotes, setShowNotes] = useState(false);
+    const [showNotes, setShowNotes] = useState(true); // Default to showing notes
     const [showEditor, setShowEditor] = useState(false);
+
+    // Fetch notes from the backend when the component mounts
+    useEffect(() => {
+        const fetchNotes = async () => {
+            try {
+                const response = await fetch('http://localhost:5000/notes');
+                const data = await response.json();
+                setNotes(data);
+            } catch (error) {
+                console.error('Error fetching notes:', error);
+            }
+        };
+
+        fetchNotes();
+    }, []);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -47,25 +45,63 @@ const Notes = () => {
         setSearchQuery(e.target.value);
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        if (editMode) {
-            const updatedNotes = notes.map((note) =>
-                note.id === noteIdToEdit ? { ...note, ...newNote, tags: newNote.tags.split(','), date: newNote.date } : note
-            );
-            setNotes(updatedNotes);
+        const noteToAdd = {
+            ...newNote,
+            tags: newNote.tags.split(',').map(tag => tag.trim()),
+        };
+
+        try {
+            if (editMode) {
+                // Update the existing note
+                const response = await fetch(`http://localhost:5000/notes/${noteIdToEdit}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(noteToAdd),
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to update note');
+                }
+
+                const updatedNote = await response.json();
+                setNotes(notes.map(note =>
+                    note.id === noteIdToEdit ? updatedNote : note
+                ));
+            } else {
+                // Add a new note
+                const response = await fetch('http://localhost:5000/notes', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(noteToAdd),
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to add note');
+                }
+
+                const newNote = await response.json();
+                setNotes([...notes, newNote]);
+            }
+
+            // Reset form
+            setNewNote({
+                title: '',
+                content: '',
+                tags: '',
+                date: new Date().toISOString().split('T')[0],
+            });
             setEditMode(false);
             setNoteIdToEdit(null);
-        } else {
-            const newId = notes.length ? notes[notes.length - 1].id + 1 : 1;
-            const noteToAdd = {
-                id: newId,
-                ...newNote,
-                tags: newNote.tags.split(','),
-            };
-            setNotes([...notes, noteToAdd]);
+        } catch (error) {
+            console.error('Error submitting note:', error);
         }
-        setNewNote({ title: '', content: '', tags: '', date: new Date().toISOString().split('T')[0] });
+
         setShowForm(false); // Hide the form after submitting
     };
 
@@ -82,8 +118,20 @@ const Notes = () => {
         setShowForm(true); // Show the form for editing
     };
 
-    const handleDelete = (noteId) => {
-        setNotes(notes.filter((note) => note.id !== noteId));
+    const handleDelete = async (noteId) => {
+        try {
+            const response = await fetch(`http://localhost:5000/notes/${noteId}`, {
+                method: 'DELETE',
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to delete note');
+            }
+
+            setNotes(notes.filter((note) => note.id !== noteId));
+        } catch (error) {
+            console.error('Error deleting note:', error);
+        }
     };
 
     const filteredNotes = notes.filter((note) =>
@@ -121,6 +169,15 @@ const Notes = () => {
             )}
             {showNotes && (
                 <div className="blog-posts">
+                    {filteredNotes.length === 0 && (
+                        <div className="example-note">
+                            <h2>Example Note</h2>
+                            <p><strong>Title:</strong> Sample Note</p>
+                            <p><strong>Content:</strong> This is an example note to show how your notes can be formatted.</p>
+                            <p><strong>Tags:</strong> example, sample</p>
+                            <p><strong>Date:</strong> {new Date().toLocaleDateString()}</p>
+                        </div>
+                    )}
                     {filteredNotes.map((note) => (
                         <div key={note.id} className="blog-post">
                             <h2>{note.title}</h2>
